@@ -17,8 +17,11 @@
 
 <body>30
     <h2 style="text-align: center;">Animal hunt Ravali Nalati</h2>
+
     <div style="text-align: center; background-color:beige;">Click on the squares to search for wild life</div>
+
     <div id="tries" style="text-align: center; background-color:darkcyan;">Number of tries is zero.</div>
+
     <div id="distance" style="text-align: center; background-color:dimgrey;">Distance is unknown.</div>
     <br>
     <div class="container"><button onclick="newGame()">Reset</button></div>
@@ -89,18 +92,19 @@
 
         var triesCount = 0
         var animalLocation = 13
-        function check(position) {
-            var pictureId = ids[position]
-            pic_src = document.getElementById(pictureId)
+          function check(position) {
+            var picId = ids[position]
+            pic_src = document.getElementById(picId)
             if (position == animalLocation)
-                pic_src.src = "./images/animal.jpg"
+                pic_src.src = "./images/squirrel.jpg"
             else
-                pic_src.src = "./images/hole.jpg"
+                pic_src.src = "./images/dirt.jpg"
 
             triesCount++
             document.getElementById("tries").innerHTML = "Number of tries is " + triesCount
             document.getElementById("distance").innerHTML = "Distance is " + distance(position, animalLocation)
         }
+        fun
 
         function distance(pos1, pos2) {
             var horDist = Math.abs(getPosition(pos1)[0] - getPosition(pos2)[0])
