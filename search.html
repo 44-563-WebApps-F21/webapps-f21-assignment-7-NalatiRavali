@@ -100,7 +100,10 @@
             animalLocation = Math.floor(Math.random()*23 + 0)
             document.getElementById("tries").innerHTML = "Number of tries is 0."
             for(var i=0; i<24; i++){
+                if(ids[i] == ids[animalLocation])
              document.getElementById(ids[i]).src = "./images/Tree.jpg"
+             else
+                    document.getElementById(ids[i]).src = "./images/animal.jpg"
               
             }
         }
